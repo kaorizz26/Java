@@ -6,7 +6,8 @@ This repository is my personal space for learning Java. I use it to track my pro
 
 What's Inside:
 
-Practice Zone: I save my coding practices and exercises here.
-Learning Log: It's where I jot down what I'm learning day by day.
-My Coding Journey: This repository is my coding companion.
+- Practice Zone: I save my coding practices and exercises here.
+- Learning Log: It's where I jot down what I'm learning day by day.
+- My Coding Journey: This repository is my coding companion.
+
 Remember, this is my own learning corner, and it's all about enhancing my Java skills. Feel free to take a peek if you're interested in my coding journey.
