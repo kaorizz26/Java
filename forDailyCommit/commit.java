@@ -1,39 +1,32 @@
 package forDailyCommit;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class commit {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Random random = new Random();
+
+        ArrayList<String> crushes = new ArrayList<String>();
+
         
-        double overallTotalCost = 0.0;
-        int numItems = 3;
-        double[] prices = new double[numItems];
-        double[] quantities = new double[numItems];
-        double[] totalCost = new double[numItems];
-        
-        for (int i = 0; i < numItems; i++) {
-            System.out.print("\nEnter price of item " + (i + 1) + ": ");
-            prices[i] = scan.nextDouble();
-            System.out.print("Quantity: ");
-            quantities[i] = scan.nextDouble();
-
-            if (prices[i] < 0 || quantities[i] < 0) {
-                System.out.println("Price and quantity must be non-negative. Please re-enter.");
-                i--; // Decrement i to repeat the current item input.
-            } else {
-                double Cost = prices[i] * quantities[i];
-
-                totalCost[i] = Cost;
-
-                overallTotalCost += Cost;
+        int counter = 0;
+        while (true) {
+            System.out.printf("Enter your crush %d name: ", counter + 1);
+            String crushInput = scan.nextLine();
+            counter++;
+            
+            if (crushInput.equalsIgnoreCase("q")) {
+                break;
+            }
+            else {
+                crushes.add(crushInput);
             }
         }
 
-        System.out.println();
-        for (int i = 0; i < numItems; i++) {
-            System.out.printf("Total Cost of item %d: %,.02f\n", i + 1, totalCost[i]);
-        }
+        int resultWife = random.nextInt(crushes.size());
 
-        System.out.printf("\nOverall Cost: $%,.02f\n", overallTotalCost);
+        System.out.printf("Your future wife will be: %s\n", crushes.get(resultWife));    
     }
 }
