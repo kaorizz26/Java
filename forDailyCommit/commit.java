@@ -6,33 +6,14 @@ public class commit {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Get more than 5 books | Get 10% discount!!!");
-        System.out.println("-------------------------------------------");
+        System.out.print("Enter distance travelled to your current destination (in km): ");
+        double distanceInput = scan.nextDouble();
 
-        double totalCost = 0.0;
-        double discount = 0.10;
+        System.out.print("Enter time taken to travel in current destination (in hour): ");
+        double timeTakenInput = scan.nextDouble();
 
-        while (true) {
-            System.out.print("\nEnter book price: ");
-            double bookPriceInput = scan.nextDouble();
+        double speed = distanceInput / timeTakenInput;
 
-            System.out.print("Enter quantity: "); 
-            double quantityInput = scan.nextDouble();
-
-            if (bookPriceInput <= 0 || quantityInput <= 0) {
-                System.out.println("Price and quantity must be above 0!");
-            }
-            else {
-                if (quantityInput > 5) {
-                    bookPriceInput = bookPriceInput - (bookPriceInput * discount);
-                    totalCost = bookPriceInput * quantityInput;
-                }
-                else {
-                    totalCost = bookPriceInput * quantityInput;
-                }
-                break;
-            }
-        }
-        System.out.printf("\nTotal Cost: P%,.02f%n", totalCost);    
+        System.out.printf("Speed: %.02f(km/h)\n", speed);
     }
 }
